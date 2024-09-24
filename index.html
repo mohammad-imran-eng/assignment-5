@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+
+
+    
+    <header class="bg-[#F9F7F3] h-20">
+        <nav class="flex justify-around">
+            <button class="btn btn-primary mt-4 text-2xl font-semibold">Blog</button>
+            <div class="flex mt-4">
+                <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
+                <h1 class="font-semibold text-[#111111] text-xl mt-3 ml-3">Donate Bangladesh</h1>
+            </div>
+            <div class="flex mt-4">
+                <img class="w-5 h-5 text-2xl font-[500] mt-1 mr-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                <h3 id="account-balance">1000</h3><span class="ml-1">BDT</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- donation and history button here -->
+         <div class="text-center mt-24">
+            <button class="btn btn-primary mr-1" id="donate-change">Donation</button>
+            <button class="btn btn-outline btn-primary ml-1" id="history-change">History</button>
+         </div>
+
+         <!-- donate field  -->
+          <div class="flex w-[90%] ml-auto mt-10" id="removed-noakhali">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/noakhali.png" alt="">
+            <div class="w-[40%] ml-7">
+                <div class="flex mb-4">
+                    <img class="w-5 h-5 text-2xl font-[500] mt-1 mr-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <h3 id="balance">0</h3><span class="ml-1">BDT</span>
+                </div>
+                <h1 class="font-bold text-2xl mb-5" id="headline">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="mb-12"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input type="text" id="amount" placeholder="Write donation amount" class="input input-bordered w-[100%] mb-3" />
+                <div class="w-96">
+                    <button class="btn btn-primary w-[553px]" id="donate-noakhali">Donated now</button>
+                </div>
+            </div>
+          </div>
+          <!-- donate second field -->
+          <div class="flex w-[90%] ml-auto mt-10" id="removed-feni">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/feni.png" alt="">
+            <div class="w-[40%] ml-7">
+                <div class="flex mb-4">
+                    <img class="w-5 h-5 text-2xl font-[500] mt-1 mr-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <h3 id="feni-balance">00</h3><span class="ml-1">BDT</span>
+                </div>
+                <h1 class="font-bold text-2xl mb-5" id="headline-two">Donate for Flood Relief in Feni,Bangladesh</h1>
+                <p class="mb-12"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input type="text" placeholder="Write donation amount" id="feni-amount" class="input input-bordered w-[100%] mb-3" />
+                <div class="w-96">
+                    <button class="btn btn-primary w-[553px]" id="donate-feni">Donated now</button>
+                </div>
+            </div>
+          </div>
+          <!-- donate third field -->
+          <div class="flex w-[90%] ml-auto mt-10" id="removed-quota">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/quota-protest.png" alt="">
+            <div class="w-[40%] ml-7">
+                <div class="flex mb-4">
+                    <img class="w-5 h-5 text-2xl font-[500] mt-1 mr-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <h3 id="quota-balance">00</h3><span class="ml-1">BDT</span>
+                </div>
+                <h1 class="font-bold text-2xl mb-5" id="headline-three">Aid for Injured in the Quota Movement</h1>
+                <p class="mb-12"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input type="text" placeholder="Write donation amount" id="quota-amount" class="input input-bordered w-[100%] mb-3" />
+                <div class="w-96">
+                    <button class="btn btn-primary w-[553px]" id="donate-quota">Donated now</button>
+                </div>
+            </div>
+          </div>
+
+          <!-- history container -->
+          <section class=" ml-auto mr-auto mt-10 hidden" id="history">
+            <div class=" bg-zinc-50 shadow-lg p-4 rounded-lg text-center" id="history-container">
+                
+              </div>
+          </section>
+    </main>
+
+
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
