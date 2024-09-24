@@ -7,6 +7,12 @@ function showElement(id){
     document.getElementById(id).classList.remove('hidden')
 }
 
+function modalShow(){
+    document.getElementById('modal').classList.remove('hidden')
+}
+
+
+
 document.getElementById('donate-noakhali').addEventListener('click',()=>{
 
     const donateamount = parseFloat(document.getElementById('amount').value);
@@ -31,6 +37,8 @@ document.getElementById('donate-noakhali').addEventListener('click',()=>{
         balanceElement.innerText = donateamount + balance;
         document.getElementById('account-balance').innerText = accountBalance - donateamount;
         document.getElementById('amount').value = ""
+        modalShow()
+        
     }
     else{
         alert('Enter a valid Amount')
@@ -63,6 +71,7 @@ document.getElementById('donate-feni').addEventListener('click',()=>{
          const createDivider = document.createElement('div')
          createDivider.classList.add('divider')
          historyContainer.insertBefore(createDivider,historyContainer.firstChild)
+         modalShow()
     }
     else {
         alert('Enter a valid Amount')
@@ -96,6 +105,7 @@ document.getElementById('donate-quota').addEventListener('click',()=>{
          const createDivider = document.createElement('div')
          createDivider.classList.add('divider')
          historyContainer.insertBefore(createDivider,historyContainer.firstChild)
+         modalShow()
     }
     else {
         alert('Enter a valid Amount')
@@ -115,7 +125,7 @@ document.getElementById('donate-change').addEventListener('click',()=> {
     showElement('removed-noakhali')
     showElement('removed-feni')
     showElement('removed-quota')
-    document.getElementById('history').classList.add('hidden')
+    document.getElementById('history-container').classList.add('hidden')
 })
 
 document.getElementById('history-change').addEventListener('click',()=> {
@@ -127,5 +137,15 @@ document.getElementById('history-change').addEventListener('click',()=> {
     removedElement('removed-noakhali')
     removedElement('removed-feni')
     removedElement('removed-quota')
-    document.getElementById('history').classList.remove('hidden')
+    document.getElementById('history-container').classList.remove('hidden')
 })
+
+document.getElementById('modal-close').addEventListener('click',()=> {
+    document.getElementById('modal').classList.add('hidden')
+})
+
+
+document.getElementById('main').addEventListener('click',()=> {
+    window.location.href = '../index.html'
+})
+

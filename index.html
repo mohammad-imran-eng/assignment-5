@@ -17,7 +17,7 @@
             <button class="btn btn-primary mt-4 text-lg md:text-2xl font-medium" id="blog">Blog</button>
             <div class="flex items-center mt-4">
                 <img class="w-10 h-10" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
-                <h1 class="font-semibold text-[#111111] text-lg md:text-xl mt-1 md:mt-3 ml-3">Donate Bangladesh</h1>
+                <h1 class="font-bold text-[#111111] text-lg md:text-xl mt-1 md:mt-3 ml-3">Donate Bangladesh</h1>
             </div>
             <div class="flex items-center mt-4 border p-2">
                 <img class="w-7 h-7 mr-1 mt-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
@@ -33,6 +33,20 @@
             <button class="btn btn-primary mr-1 font-medium" id="donate-change">Donation</button>
             <button class="btn btn-outline btn-primary ml-1 font-medium" id="history-change">History</button>
         </div>
+
+        <!-- modal -->
+        <div class="modal-box fixed ml-[360px] -mt-24 z-10 hidden bg-blue-200" id="modal">
+            <h3 class="text-3xl font-bold text-center">Congrates!</h3>
+            <div class="flex justify-center mt-4">
+                <img class="w-10" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png"  alt="">
+            </div>
+            <p class="py-4 font-medium text-center text-[#3c3c3c]">You have donated for Humankind</p>
+            <h2 class="text-2xl font-bold text-center">Successfull</h2>
+            <div class="flex justify-center mt-4">
+                <button class="btn" id="modal-close">Close Confirmation</button>
+            </div>
+        </div>
+       
     
         <div class="flex flex-col lg:flex-row lg:w-[90%] lg:ml-auto mt-10" id="removed-noakhali">
             <img class="w-full lg:w-96" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/noakhali.png" alt="">
@@ -44,7 +58,7 @@
                 <h1 class="font-bold text-2xl mb-5" id="headline">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="mb-12">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution makes a difference.</p>
                 <input type="text" id="amount" placeholder="Write donation amount" class="input input-bordered w-full mb-3">
-                <button class="btn btn-primary w-full lg:w-[553px]" id="donate-noakhali">Donate now</button>
+                <button class="btn btn-primary w-full lg:w-[492px]" id="donate-noakhali">Donate now</button>
             </div>
         </div>
     
@@ -58,7 +72,7 @@
                 <h1 class="font-bold text-2xl mb-5" id="headline-two">Donate for Flood Relief in Feni, Bangladesh</h1>
                 <p class="mb-12">The recent floods in Feni have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies.</p>
                 <input type="text" id="feni-amount" placeholder="Write donation amount" class="input input-bordered w-full mb-3">
-                <button class="btn btn-primary w-full lg:w-[553px]" id="donate-feni">Donate now</button>
+                <button class="btn btn-primary w-full lg:w-[492px]" id="donate-feni">Donate now</button>
             </div>
         </div>
     
@@ -69,17 +83,17 @@
                     <img class="w-5 h-5 mt-1 mr-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
                     <h3 id="quota-balance">00</h3><span class="ml-1">BDT</span>
                 </div>
-                <h1 class="font-bold text-2xl mb-5" id="headline-three">Aid for Injured in the Quota Movement</h1>
+                <h1 class="font-bold text-2xl mb-5" id="headline-three">Donate for Injured in the Quota Movement</h1>
                 <p class="mb-12">The recent floods have caused damage to homes and infrastructure. Your contribution helps provide aid to affected communities.</p>
                 <input type="text" id="quota-amount" placeholder="Write donation amount" class="input input-bordered w-full mb-3">
-                <button class="btn btn-primary w-full lg:w-[553px]" id="donate-quota">Donate now</button>
+                <button class="btn btn-primary w-full lg:w-[492px]" id="donate-quota">Donate now</button>
             </div>
         </div>
     
         <!-- History container -->
-        <section class="w-full mx-auto mt-10 hidden max-w-lg" id="history">
-            <div class="modal-box" id="history-container"></div>
-        </section>
+        <div tabindex="0" class="collapse border-base-300 bg-base-200 border text-center shadow-lg hidden mb-3" id="history-container"></div>
+
+         
     </main>
     
 

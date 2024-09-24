@@ -14,7 +14,7 @@
             <button id="main" class="btn btn-primary mt-4 text-lg md:text-2xl font-medium">Home</button>
             <div class="flex items-center mt-4">
                 <img class="w-10 h-10" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
-                <h1 class="font-semibold text-[#111111] text-lg md:text-xl mt-1 md:mt-3 ml-3">Donate Bangladesh</h1>
+                <h1 class="font-bold text-[#111111] text-lg md:text-xl mt-1 md:mt-3 ml-3">Donate Bangladesh</h1>
             </div>
             <div class="flex items-center mt-4 border p-2">
                 <img class="w-7 h-7 mr-1 mt-1" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
@@ -23,6 +23,70 @@
             </div>
         </nav>
     </header>
+
+
+
+        <main class="mt-[150px] max-w-7xl ml-auto mr-auto ">
+            <div class="flex font-bold text-3xl mb-10">
+                <h1 class="mr-1">Important FAQ</h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#000000" fill="none">
+                    <path d="M22 11.5667C22 16.8499 17.5222 21.1334 12 21.1334C11.3507 21.1343 10.7032 21.0742 10.0654 20.9545C9.60633 20.8682 9.37678 20.8251 9.21653 20.8496C9.05627 20.8741 8.82918 20.9948 8.37499 21.2364C7.09014 21.9197 5.59195 22.161 4.15111 21.893C4.69874 21.2194 5.07275 20.4112 5.23778 19.5448C5.33778 19.0148 5.09 18.5 4.71889 18.1231C3.03333 16.4115 2 14.1051 2 11.5667C2 6.28357 6.47778 2 12 2C17.5222 2 22 6.28357 22 11.5667Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M10 9.84615C10 8.82655 10.8954 8 12 8C13.1046 8 14 8.82655 14 9.84615C14 10.2137 13.8837 10.5561 13.6831 10.8438C13.0854 11.7012 12 12.5189 12 13.5385V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M12 16.5H12.009" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a web page in a hierarchical tree format, allowing developers to access, manipulate, and modify the content, structure, and style of the webpage dynamically using programming languages like JavaScript.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select the element of (DOM)?</div>
+                  <div class="collapse-content">
+                    <p>If you know the id of an element, you can use document.getElementById()</p>
+                    <p>If you want to grab all elements with a specific class, use document.getElementsByClassName()</p>
+                    <p>To select elements by their tag name (like &lt;div&gt;, &lt;/p&gt;, etc.), you can use document.getElementsByTagName()</p>
+                    <p>The document.querySelector() method selects the first element that matches a CSS selector:</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is the delegate in the context of the DOM,and why it is useful?</div>
+                  <div class="collapse-content">
+                    <p>Performance Improvement:
+
+                        Instead of attaching individual event listeners to multiple child elements, you attach just one to a parent element. This reduces the number of event listeners and improves performance, especially in cases where there are many child elements (e.g., a long list).
+                        Handles Dynamic Elements:
+                        
+                        Event delegation is particularly useful when dealing with elements added dynamically (i.e., after the page has loaded). Since the parent element's listener captures events even for new child elements, you don't need to add new listeners when elements are dynamically inserted.
+                        Simpler Code:
+                        
+                        Maintaining just one event listener on a parent element is simpler and cleaner compared to adding many listeners to individual child elements.</p>
+                  </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate elements attributes using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>1. Get Attribute Value</p>
+                      <p>2. Set or Change Attribute Value</p>
+                      <p>3. Remove an Attribute</p>
+                      <p>4. Check for the Presence of an Attribute</p>
+                      <p>Special Cases: Class and ID Manipulation
+                        For manipulating the class and id attributes specifically, there are shorthand properties and methods.
+                        
+                        Manipulate the class attribute:
+                        Use element.className to get or set the entire class attribute value.
+                        Use element.classList to add, remove, or toggle specific classes.</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+        </main>
 
 
    
