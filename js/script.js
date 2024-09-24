@@ -9,12 +9,9 @@ function showElement(id){
 
 document.getElementById('donate-noakhali').addEventListener('click',()=>{
 
-    
-
     const donateamount = parseFloat(document.getElementById('amount').value);
-    
-
-    if(donateamount > 0 && isNaN){
+    const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
+    if(donateamount > 0 && isNaN && donateamount <= accountBalance){
         const historyContainer = document.getElementById('history-container');
         const headline = document.getElementById('headline').innerText;
         const date = new Date();
@@ -25,10 +22,13 @@ document.getElementById('donate-noakhali').addEventListener('click',()=>{
         `
         historyContainer.insertBefore(historyItem,historyContainer.firstChild)
 
+        const createDivider = document.createElement('div')
+        createDivider.classList.add('divider')
+        historyContainer.insertBefore(createDivider,historyContainer.firstChild)
+
         const balance = parseFloat(document.getElementById('balance').innerText);
         const balanceElement = document.getElementById('balance');
         balanceElement.innerText = donateamount + balance;
-        const accountBalance = document.getElementById('account-balance').innerText;
         document.getElementById('account-balance').innerText = accountBalance - donateamount;
         document.getElementById('amount').value = ""
     }
@@ -37,22 +37,17 @@ document.getElementById('donate-noakhali').addEventListener('click',()=>{
         document.getElementById('amount').value = ""
     }
 
-    
-        
-
-    
 
 })
 
 document.getElementById('donate-feni').addEventListener('click',()=>{
 
     const donateamount = parseFloat(document.getElementById('feni-amount').value);
-
-    if(donateamount > 0 && isNaN){
-        const balance = parseFloat(document.getElementById('feni-balance').innerText).toFixed(2);
-        const balanceElement = document.getElementById('feni-balance').toFixed(2);
+    const accountBalance = parseFloat(document.getElementById('account-balance').innerText);
+    if(donateamount > 0 && isNaN && donateamount <= accountBalance){
+        const balance = parseFloat(document.getElementById('feni-balance').innerText);
+        const balanceElement = document.getElementById('feni-balance');
         balanceElement.innerText = donateamount + balance;
-        const accountBalance = parseFloat(document.getElementById('account-balance').innerText).toFixed(2);
         document.getElementById('account-balance').innerText = accountBalance - donateamount;
         document.getElementById('feni-amount').value = ""
         const historyContainer = document.getElementById('history-container');
@@ -64,6 +59,10 @@ document.getElementById('donate-feni').addEventListener('click',()=>{
         <h1> Date: ${date.toLocaleString()}</h1>
          `
          historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+
+         const createDivider = document.createElement('div')
+         createDivider.classList.add('divider')
+         historyContainer.insertBefore(createDivider,historyContainer.firstChild)
     }
     else {
         alert('Enter a valid Amount')
@@ -75,21 +74,35 @@ document.getElementById('donate-feni').addEventListener('click',()=>{
 
 document.getElementById('donate-quota').addEventListener('click',()=>{
     const donateamount = parseFloat(document.getElementById('quota-amount').value);
-    const balance = parseFloat(document.getElementById('quota-balance').innerText);
-    const balanceElement = document.getElementById('quota-balance');
-    balanceElement.innerText = donateamount + balance;
     const accountBalance = document.getElementById('account-balance').innerText;
-    document.getElementById('account-balance').innerText = accountBalance - donateamount;
-    document.getElementById('quota-amount').value = ""
-    const historyContainer = document.getElementById('history-container');
-    const headline = document.getElementById('headline-three').innerText;
-    const date = new Date();
-    const historyItem = document.createElement('div');
-     historyItem.innerHTML = `
-    <h1 class="font-bold text-2xl"> ${donateamount} Taka ${headline}</h1>
-    <h1> Date: ${date.toLocaleString()}</h1>
-     `
-     historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+
+    if(donateamount > 0 && isNaN && donateamount <= accountBalance){
+
+        const balance = parseFloat(document.getElementById('quota-balance').innerText);
+        const balanceElement = document.getElementById('quota-balance');
+        balanceElement.innerText = donateamount + balance;
+        document.getElementById('account-balance').innerText = accountBalance - donateamount;
+        document.getElementById('quota-amount').value = ""
+        const historyContainer = document.getElementById('history-container');
+        const headline = document.getElementById('headline-three').innerText;
+        const date = new Date();
+        const historyItem = document.createElement('div');
+         historyItem.innerHTML = `
+        <h1 class="font-bold text-2xl"> ${donateamount} Taka ${headline}</h1>
+        <h1> Date: ${date.toLocaleString()}</h1>
+         `
+         historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+
+         const createDivider = document.createElement('div')
+         createDivider.classList.add('divider')
+         historyContainer.insertBefore(createDivider,historyContainer.firstChild)
+    }
+    else {
+        alert('Enter a valid Amount')
+        document.getElementById('quota-amount').value = ""
+    }
+    
+   
 })
 
 
