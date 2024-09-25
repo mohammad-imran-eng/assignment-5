@@ -145,7 +145,4 @@ document.getElementById('modal-close').addEventListener('click',()=> {
 })
 
 
-document.getElementById('main').addEventListener('click',()=> {
-    window.location.href = '../index.html'
-})
 
